@@ -6,12 +6,13 @@ def index(request):
     return render (request, "index.html")
 def about(request):
     return render (request, "about.html")
+
 def contact(request):
-    if request.method == "POST":
+    if request.method == "POST": 
         name = request.POST.get('name')
         email = request.POST.get('email')
         sugs = request.POST.get('sugs')
         phone = request.POST.get('phone')
-        contact =  Contact(name = name, email=email, sugs=sugs, phone=phone, date = datetime.today )
-        contact.save
+        contact =  Contact(name=name, email=email, sugs=sugs, phone=phone, date = datetime.today() )
+        contact.save()
     return render (request, "contact.html")

@@ -7,8 +7,9 @@ Contact
 
 
 {% block body %}
-{% csrf_token %}
 
+{% csrf_token %}
+<div class="container">
 <form>
     <div class="form-row">
       <div class="form-group col-md-6">
@@ -31,5 +32,6 @@ Contact
    <br>
     <button type="submit" class="btn btn-primary"> Submit </button>
   </form>
+</div>
 {% endblock body %}
 
