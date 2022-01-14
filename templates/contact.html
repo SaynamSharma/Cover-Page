@@ -1,21 +1,35 @@
 {% extends 'base.html' %}
 {% block title %}
 
-
 Contact
-
-
+ 
 {% endblock title %}
 
 
-
-
-
-
 {% block body %}
-Contact me at - <br>
-Email - Saynamsharma221b@gmail.com <br>
-Contact - +919419271101
-ss
+{% csrf_token %}
+
+<form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Name</label>
+        <input type="name" class="form-control" id="inputName" placeholder="Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail">Email</label>
+        <input type="Email" class="form-control" id="inputEmail" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Suggestions</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder=".......">
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">Phone No. </label>
+      <input type="text" class="form-control" id="Phone no" placeholder="number">
+    </div>
+   <br>
+    <button type="submit" class="btn btn-primary"> Submit </button>
+  </form>
 {% endblock body %}
 
