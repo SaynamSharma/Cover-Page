@@ -8,3 +8,6 @@ class Contact(models.Model):
     phone = models.CharField(max_length=13)
     desc = models.TextField( null= True)
     date = models.DateField( null= True)
+
+    def __str__(self):
+        return self.name
