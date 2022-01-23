@@ -1,17 +1,86 @@
-{% extends 'base.html' %}
+<html lang="en">
 
-{% block title %}
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %} Code{% endblock title %} </title>
+    
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+    
+          
+            #particles-js {
+                width: 100%;
+                height: 100vh;
+                background-image:
+                    linear-gradient(rgba(0, 0, 0, 0.7),
+                        rgba(0, 0, 0, 0.7)),
+                    url("/static/img.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+    
+            
+            
+        </style>
+        
+    
+    </head>
+    
+    <body>
+        <div id="particles-js">
+            
+          <h2> Hello</h2>
+          <a href="/templates/contact.html"> Hello</a>
 
 
-Homepage
+          <div class="container">
+            <form method="POST" action="/contact">
+            {% csrf_token %}
+              <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" class="form-control" id="name" name = "name" placeholder="enter your name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email"  name = "email" placeholder="Enter your email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" class="form-control" id="phone"  name = "phone" placeholder="Enter your number">
+              </div>
+              <div class="form-group">
+                <label for="desc"> Suggsetions</label>
+                <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+              </div>
+              <br>
+              <button class = "btn btn-primary" type = "submit"> Submit </button>
+            </form>
+          
+          </div>
 
 
-{% endblock title %}
 
 
 
-{% block body %}
 
 
 
-{% endblock body %}
+    
+        </div>
+        <script src="/static/particles.js"></script>
+        <script src="/static/app.js"></script>
+    
+    </body>
+  
+    {% block body %}
+
+    {% endblock body %}
+    </html>
+    
+    
