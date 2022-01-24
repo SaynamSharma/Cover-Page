@@ -26,15 +26,26 @@
     position: absolute;
     color: aliceblue;
     top: 10%;
-    left: 50%;
+    left: 35%;
     transform: translate(-50%, -50%);
 }
   .container{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    bottom: 0%;
+    left: 10%;
     transform: translate(-50%, -50%);
      top: cm;
     color: rgb(36, 170, 107);
   }
+  
+      .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
     
