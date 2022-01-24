@@ -15,19 +15,26 @@
     background-size: cover;
 }
 
-.center-text {
+.footer{
     position: absolute;
-    top: 50%;
+    color: aliceblue;
+    top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.footer{
+.about{
     position: absolute;
-    top: 90%;
+    color: aliceblue;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
   .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     top: cm;
     color: rgb(36, 170, 107);
   }
     

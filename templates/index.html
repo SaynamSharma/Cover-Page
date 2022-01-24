@@ -1,82 +1,90 @@
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %} Code{% endblock title %} </title>
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="/static/styles.css">
-        <link rel="stylesheet" href="/static/body.css">
-    
-       
-        
-    
-    </head>
-    
-    <body>
-        <div id="particles-js">
-<div>
-  <form method="get" action="/index1">
-    <button type="submit">Continue</button>
-</form>
-</div>
-            <div class="center-text">
-                
-
-                <div class="container">
-                    <form method="POST" action="/contact">
-                    {% csrf_token %}
-                      <div class="form-group">
-                        <label for="name">name</label>
-                        <input type="text" class="form-control" id="name" name = "name" placeholder="enter your name">
-                      </div>
-                      <div class="form-group">
-                        <label for="email">Email address</label>
-                        <input type="email" class="form-control" id="email"  name = "email" placeholder="Enter your email">
-                      </div>
-                      <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" class="form-control" id="phone"  name = "phone" placeholder="Enter your number">
-                      </div>
-                      <div class="form-group">
-                        <label for="desc"> Suggsetions</label>
-                        <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
-                      </div>
-                      <br>
-                      <button class = "btn btn-primary" type = "submit"> Submit </button>
-                    </form>
-                  
-                  
-                  </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} Code{% endblock title %} </title>
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/body.css">
 
 
-                  
-            </div>
 
-            <footer class="footer">
-              <p class="footer__title">Saynam</p>
-              <div class="footer__social">
-                  <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
-                  <a href="https://www.instagram.com/saynammmmmmm/" class="footer__icon"><i
-                          class='bx bxl-instagram'></i></a>
-                  <a href="https://twitter.com/Tweet2D3xTR" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-              </div>
-              <p class="footer__copy">&#169; Saynam. All rigths reserved</p>
-          </footer>
-           
-        
+
+</head>
+
+<body>
+  <div id="particles-js">
+    <div>
+      <section class="about" id="about">
+
+            <h2 class="about__subtitle">I'am Saynam</h2>
+            <p class="about__text">I solve problems in creative ways. At Sir MVIT, where I am completing my
+              senior year of Engineering, I have learned the importance of applying classical strategies to
+              modern-day projects.
+
+              Participated in some hardware projects and software projects where i learned engineering team.
+
+              Passion for innovation, programming, problem solving, coding and to get every opportunity to
+              learn.</p>
+          </div>
         </div>
-       
-        
-        <script src="/static/particles.js"></script>
-        <script src="/static/app.js"></script>
-    
-    </body>
-  
-    {% block body %}
+      </section>
 
-    {% endblock body %}
-    </html>
-    
-    
+    </div>
+      <div class="container">
+        <form method="POST" action="/contact">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your number">
+          </div>
+          <div class="form-group">
+            <label for="desc"> Suggsetions</label>
+            <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
+          </div>
+          <br>
+          <button class="btn btn-primary" type="submit"> Submit </button>
+        </form>
+
+
+      </div>
+
+
+
+    <h4>
+      <footer class="footer">
+        <p class="footer__title">Saynam Sharma</p>
+        <h2>
+          <div class="footer__social">
+            <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/saynammmmmmm/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="https://twitter.com/Tweet2D3xTR" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+          </div>
+        </h2>
+        <p class="footer__copy">&#169; Saynam. All rigths reserved</p>
+      </footer>
+    </h4>
+
+  </div>
+
+
+  <script src="/static/particles.js"></script>
+  <script src="/static/app.js"></script>
+
+</body>
+
+{% block body %}
+
+{% endblock body %}
+
+</html>
