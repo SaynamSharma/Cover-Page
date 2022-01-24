@@ -4,6 +4,7 @@ from domain import views
 
 urlpatterns = [
     path("", views.index, name = "home"),
-    path("about", views.about, name = "about" ),
+    path("index1", views.about, name = "index1" ),
     path("contact", views.contact, name = "contact" ),
+    
 ]
