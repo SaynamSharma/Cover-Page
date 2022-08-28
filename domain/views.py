@@ -1,5 +1,5 @@
 from ast import Name
-from django.shortcuts import render , HttpResponse
+from django.shortcuts import render
 from datetime import datetime
 from domain.models import Contact
 from django.contrib import messages
@@ -18,5 +18,4 @@ def contact(request):
         phone = request.POST.get('phone')
         contact =  Contact(name=name, email=email, phone=phone , desc=desc , date=datetime.today())
         contact.save()
-        messages.success(request, 'Your message has been sent.') 
     return render (request, "contact.html")

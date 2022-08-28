@@ -1,7 +1,45 @@
-{% extends 'index.html' %}
-{% block title %} Contact {% endblock title %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block body %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/form_c.css">
+</head>
 
-{% endblock body %}
+<body>
 
+    <form method="POST" action="/contact">
+        <div class="form">
+            {% csrf_token %}
+            <div class="title">Welcome</div>
+            <div class="subtitle">Let's create your account!</div>
+            <div class="input-container ic1">
+                <input id="name" name="name" class="input" type="text" placeholder=" " />
+                <div class="cut"></div>
+                <label for="firstname" class="placeholder">First name</label>
+            </div>
+            <div class="input-container ic1">
+                <input id="email" name="email" class="input" type="text" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="email" class="placeholder">Email</>
+            </div>
+            <div class="input-container ic1">
+                <input id="desc" name="desc" class="input" type="text" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="text" class="placeholder">Desc</>
+            </div>
+            <div class="input-container ic1">
+                <input id="phone" name="phone" class="input" type="text" placeholder=" " />
+                <div class="cut cut-short"></div>
+                <label for="phone" class="placeholder">phone</>
+            </div>
+            <button type="submit" class="submit"> submit</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -16,13 +16,17 @@
     <div>
       <section class="about" id="about">
 
-        <h2 class="about__subtitle">I'am Saynam</h2>
+        <h2 class="about__subtitle">Hello, My Name is  Saynam Sharma and I am a -</h2>
         <p class="about__text">Python/Backend Developer with a passion of working in the computer software industry.
-          Skilled in Python, C++, Django Framework, RESTAPIs, PostgreSQL, HTML5 and CSS3. Strong professional with a
-          Bachelor of Engineering from Sir M Visvesvaraya Institute of Technology, BANGALORE.</p>
+          Skilled in Python, C++ 14, Django 4.x , JINJA 3.x , PostgreSQL , HTML5 and CSS3.</p>
 
         <h2>
           <p class="hh"><a href="/static/Resume.pdf" id="style-2" data-replace="Resume"><span>Click to hire</span></a>
+          </p>
+        </h2>
+        <h2>
+          <p class="hh"><a href="{% url 'contact'  %}" id="style-2" data-replace="Contact"><span>Click to
+                Contact</span></a>
           </p>
         </h2>
     </div>
@@ -30,30 +34,7 @@
   </section>
 
   </div>
-  <div class="container">
-    <form method="POST" action="/contact">
-      {% csrf_token %}
-      <div class="form-group">
-        <label for="name">name</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="enter your name">
-      </div>
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your number">
-      </div>
-      <div class="form-group">
-        <label for="desc"> Suggsetions</label>
-        <textarea class="form-control" id="desc" rows="3" name="desc"></textarea>
-      </div>
-      <br>
-      <button class="btn btn-primary" type="submit"> Submit </button>
-    </form>
 
-  </div>
 
 
 
